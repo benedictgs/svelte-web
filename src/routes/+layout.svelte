@@ -8,12 +8,11 @@
 </script>
 
 
-<body>
+
+<body class="antialiased bg-gray-700 text-slate-200">
+       
     <Header />
     <slot />
     
 </body>
 
-<style>
-
-</style>

@@ -25,4 +25,4 @@
     }
   </style>
   
-  <img loading="lazy" {src} {alt} class:loaded bind:this={thisImage} />
+  <img loading="lazy" {src} {alt} class:loaded bind:this={thisImage}/>
