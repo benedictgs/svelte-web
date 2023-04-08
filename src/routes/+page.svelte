@@ -7,11 +7,11 @@
     let stats = [
         {key:"Country of Origin", value:"Indonesia"},
         {key:"Gender", value:"Male ♂️"},
+        {key:"Status", value:"Single 🔥"},
         {key:"Experience", value:"2 years"},
         {key:"Degree", value:"Bachelor of Engineering"},
         {key:"Intelligence Quotient", value:"133"},
-        {key:"Relationship", value:"Single 🔥"},
-        {key:"Meme and Pizza🍕", value:"Yes"},
+        {key:"Meme and Pizza🍕", value:"Yes 👌"},
     ];
 
     function calculateAge() {
@@ -60,7 +60,7 @@
                 <h3 in:fade="{{delay:1000,duration:1000}}" class="font-bebas text-xl">Personal Details</h3>
                 <ul class="">
                     {#each stats as stat}
-                    <li>{stat.key} : <span class="font-semibold">{stat.value}</span></li>
+                    <li><span class="font-light">{stat.key} : </span><span class="font-semibold">{stat.value}</span></li>
                     {/each}
                 </ul>
             </div>
