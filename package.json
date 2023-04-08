@@ -4,6 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
+		"host": "vite dev --host",
 		"build": "vite build",
 		"preview": "vite preview",
 		"test": "playwright test",
@@ -34,5 +35,9 @@
 		"vite": "^4.2.0",
 		"vitest": "^0.25.3"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@fontsource/bebas-neue": "^4.5.9",
+		"@fontsource/lexend": "^4.5.15"
+	}
 }

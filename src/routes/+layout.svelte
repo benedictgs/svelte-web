@@ -1,5 +1,7 @@
 <script lang="ts">
     import type { LayoutData } from './$types';
+    import '@fontsource/bebas-neue';
+    import '@fontsource/lexend'
     import '../app.css';
     
     import Header from './Header.svelte';
@@ -9,7 +11,7 @@
 
 
 
-<body class="antialiased bg-gray-700 text-slate-200">
+<body class="antialiased bg-[hsl(225,29%,16%)]  text-slate-200">
        
     <Header />
     <slot />
