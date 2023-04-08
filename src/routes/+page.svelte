@@ -4,6 +4,8 @@
     import BackgroundHighlight from '$lib/media/dark-gradient-highlight.png';
     import CountryFlag from '$lib/media/indonesia-flag.png';
 
+    import ScrollUpButton from "$lib/components/ScrollUpButton.svelte";
+
     let stats = [
         {key:"Country of Origin", value:"Indonesia"},
         {key:"Gender", value:"Male ♂️"},
@@ -28,10 +30,13 @@
         return age;
     }
 
-    let age = calculateAge();
+    let age = calculateAge();   
+
 </script>
 
-<picture class=" absolute justify-end top-0 -z-0">
+
+
+<picture class="hidden absolute justify-end top-0 -z-0">
     <img class="w-screen h-screen object-cover" src={BackgroundHighlight} alt="backgroundhighlight" decoding="async">
 </picture>
 
@@ -112,5 +117,5 @@
         </div>
     </section>
     
-    
+    <ScrollUpButton />
 </main>
