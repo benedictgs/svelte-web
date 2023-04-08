@@ -18,3 +18,10 @@
     
 </body>
 
+
+<style>
+    :root {
+        scroll-padding-top: 6rem;
+        scroll-behavior: smooth;
+    }
+</style>
