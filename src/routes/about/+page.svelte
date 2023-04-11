@@ -1,9 +1,10 @@
 <script lang="ts">
-    import Button from '@mui/material/Button'
-    import ReactComponent from '$lib/components/ReactComponent.svelte';
-    import type { PageData } from './$types';
-        
-    export let data: PageData;
+  import Radar from '$lib/components/react/Radar';
+  import Button from '@mui/material/Button';
+  import ReactComponent from '$lib/components/ReactComponent.svelte';
+  import type { PageData } from './$types';
+      
+  export let data: PageData;
 </script>
 
 <div class="absolute inset-0 z-0 bg-cover w-screen h-screen bg-no-repeat bg-[#0B1120] bg-[url('$lib/media/hero-dark.jpg')] blur-3xl"></div>
@@ -24,3 +25,10 @@
   color="primary"
   onClick={() => alert("hello world!")}
 />
+<div class="h-60 w-60 bg-cyan-300">
+    test
+    <ReactComponent
+      el={Radar}
+    />
+    test
+</div>
