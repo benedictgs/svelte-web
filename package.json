@@ -38,6 +38,8 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource/bebas-neue": "^4.5.9",
-		"@fontsource/lexend": "^4.5.15"
+		"@fontsource/lexend": "^4.5.15",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
 	}
 }
