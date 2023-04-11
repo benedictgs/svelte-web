@@ -1,6 +1,8 @@
 <script lang="ts">
+    import Button from '@mui/material/Button'
+    import ReactComponent from '$lib/components/ReactComponent.svelte';
     import type { PageData } from './$types';
-    
+        
     export let data: PageData;
 </script>
 
@@ -13,3 +15,12 @@
         <p class="mx-10 sm:mx-20 my-5 max-w-[75ch] font-light text-stone-200 md:text-xl">Svelte Typescript Tailwind React Component Cloudflare Github </p>
     </div>
 </div>
+
+<ReactComponent
+  el={Button}
+  class="mui-btn"
+  children="Hello"
+  variant="contained"
+  color="primary"
+  onClick={() => alert("hello world!")}
+/>

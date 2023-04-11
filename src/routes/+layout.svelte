@@ -1,7 +1,12 @@
 <script lang="ts">
     import type { LayoutData } from './$types';
     import '@fontsource/bebas-neue';
-    import '@fontsource/lexend'
+    import '@fontsource/lexend';
+    import '@fontsource/roboto/300.css';
+    import '@fontsource/roboto/400.css';
+    import '@fontsource/roboto/500.css';
+    import '@fontsource/roboto/700.css';
+
     import '../app.css';
     
     import Header from './Header.svelte';
