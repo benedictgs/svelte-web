@@ -1,18 +1,17 @@
-# create-svelte
+# Svelte web with Builder.io Integration
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This is a branch of [main](https://github.com/benedictgs/svelte-web/tree/main) with Svelte + [Builder.io](https://github.com/BuilderIO/builder)
 
-## Creating a project
+This will not be on hiatus, as the integration are broken. 
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Builder integration
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+There is a problem in [integrating the page](https://www.builder.io/c/docs/integrating-builder-pages) from the main documentation as the routing in new sveltekit are changed. 
+For correct integration checkout the [examples.](https://github.com/BuilderIO/builder/tree/main/examples/svelte/sveltekit)
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## Recreating the project
+
+ Clone this repo `gh repo clone benedictgs/svelte-web`, checkout the branch,  and install the node module with `npm install`
 
 ## Developing
 
