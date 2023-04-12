@@ -1,18 +1,19 @@
-# create-svelte
+# Svelte web with React Chart component Branch
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This is a branch of [main](https://github.com/benedictgs/svelte-web/tree/main) with Svelte + React component chart from nivo (powered by D3)
 
-## Creating a project
 
-If you're seeing this, you've probably already done this step. Congrats!
+## React component compatibility
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+I am using a small adapter from [jpinho/svelte-react-kit](https://github.com/jpinho/svelte-react-kit) explained [more on this article.](https://pandemicode.dev/using-react-within-your-svelte-applications-3b1f2a75aefc). 
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+This use react DOM Render on top of svelte. 
+
+For other alternative, there is [svelte-preprocessor-react](https://www.npmjs.com/package/svelte-preprocess-react) explained in this [article.](https://bfanger.medium.com/combining-react-and-svelte-in-a-single-app-interop-6f78aed96ce2)
+
+## Recreating the project
+
+ Clone this repo `gh repo clone benedictgs/svelte-web`, checkout the branch,  and install the node module with `npm install`
 
 ## Developing
 
