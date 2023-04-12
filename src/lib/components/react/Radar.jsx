@@ -1,7 +1,7 @@
 // install (please make sure versions match peerDependencies)
 // yarn add @nivo/core @nivo/radar
 import React from 'react';
-import { ResponsiveRadar } from '@nivo/radar'
+import { Radar } from '@nivo/radar'
 
 const dataRadar = [
     {
@@ -40,61 +40,41 @@ const dataRadar = [
 // no chart will be rendered.
 // website examples showcase many properties,
 // you'll often use just a few of them.
-const MyResponsiveRadar = () => (
-    <ResponsiveRadar
-        data={dataRadar}
-        keys={[ 'chardonay', 'carmenere', 'syrah' ]}
-        indexBy="taste"
-        valueFormat=">-.2f"
-        margin={{ top: 70, right: 80, bottom: 40, left: 80 }}
-        borderColor={{ from: 'color' }}
-        gridLabelOffset={36}
-        dotSize={10}
-        dotColor={{ theme: 'background' }}
-        dotBorderWidth={2}
-        colors={{ scheme: 'nivo' }}
-        blendMode="multiply"
-        motionConfig="wobbly"
-        legends={[
-            {
-                anchor: 'top-left',
-                direction: 'column',
-                translateX: -50,
-                translateY: -40,
-                itemWidth: 80,
-                itemHeight: 20,
-                itemTextColor: '#999',
-                symbolSize: 12,
-                symbolShape: 'circle',
-                effects: [
-                    {
-                        on: 'hover',
-                        style: {
-                            itemTextColor: '#000'
-                        }
-                    }
-                ]
-            }
-        ]}
-    />
-)
 
-export default function Radar () {
+
+export default function Radard () {
   return (
-  <div class="w-full h-60">
-    <ResponsiveRadar
+    <Radar
+        theme= {{
+          background: '#00000022',
+          textColor: '#99ffff', 
+          fontSize: 20,
+          tooltip: {container: {
+            background:'#00000055',
+            color: '#99ffff',
+          }}
+        }}
+        height={500}
+        width={500}
         data={dataRadar}
         keys={[ 'chardonay', 'carmenere', 'syrah' ]}
         indexBy="taste"
-        valueFormat=">-.2f"
         margin={{ top: 70, right: 80, bottom: 40, left: 80 }}
-        borderColor={{ from: 'color' }}
-        gridLabelOffset={36}
-        dotSize={10}
+        borderWidth={4}
+        borderColor={{ from: 'color', modifiers: [] }}
+        gridShape="linear"
+        gridLabelOffset={14}
+        dotSize={19}
         dotColor={{ theme: 'background' }}
         dotBorderWidth={2}
-        colors={{ scheme: 'nivo' }}
-        blendMode="multiply"
+        dotBorderColor={{ from: 'color', modifiers: [] }}
+        enableDotLabel={true}
+        dotLabel="value"
+        dotLabelYOffset={4}
+        colors={{ scheme: 'accent' }}
+        fillOpacity={0.35}
+        blendMode="hard-light"
+        animate={true}
         motionConfig="wobbly"
         legends={[
             {
@@ -118,6 +98,5 @@ export default function Radar () {
             }
         ]}
     />
-  </div>
 );
 }

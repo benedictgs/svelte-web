@@ -2,6 +2,8 @@
     import { onMount } from "svelte";
     import { fade } from "svelte/transition";
     import CountryFlag from '$lib/media/indonesia-flag.png';
+    import ReactComponent from '$lib/components/ReactComponent.svelte';
+    import Radar from '$lib/components/react/Radar';
 
 
     onMount(()=>{
@@ -74,7 +76,9 @@
         <div>
             <hr class=" my-3  border-gray-600">
             <h3 in:fade="{{delay:1000,duration:1000}}" class="font-bebas text-xl">Chart</h3>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates totam labore, perferendis cupiditate veniam sequi cum neque architecto praesentium et. Ipsa voluptate excepturi blanditiis, obcaecati molestiae ratione velit tempore iusto?
+            <ReactComponent
+                el={Radar}
+            />  
         </div>
         <div class="sm:col-span-2">
             <hr class=" my-3  border-gray-600">

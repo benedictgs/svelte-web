@@ -7,7 +7,7 @@
   export let data: PageData;
 </script>
 
-<div class="absolute inset-0 z-0 bg-cover w-screen h-screen bg-no-repeat bg-[#0B1120] bg-[url('$lib/media/hero-dark.jpg')] blur-3xl"></div>
+<div class="absolute inset-0 z-0 bg-cover w-screen h-screen bg-no-repeat bg-[#0B1120] bg-[url('$lib/media/hero-dark.jpg')] "></div>
 
 <div class="relative flex flex-col justify-center items-center">
     <div class="z-10 flex flex-col items-center text-center lg:mt-20">
@@ -25,10 +25,15 @@
   color="primary"
   onClick={() => alert("hello world!")}
 />
-<div class="h-60 w-60 bg-cyan-300">
+<div class=" bg-cyan-300">
     test
     <ReactComponent
       el={Radar}
     />
     test
 </div>
+
+
+<style>
+  
+</style>
