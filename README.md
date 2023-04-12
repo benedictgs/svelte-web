@@ -1,18 +1,13 @@
-# create-svelte
+# My Personal Web
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Build with Svelte-kit.
 
-## Creating a project
+The Website has informations that are ©️ copyrighted. 
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Recreating the project
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+ Clone this repo `gh repo clone benedictgs/svelte-web`, checkout the branch,  and install the node module with `npm install`
+`
 
 ## Developing
 
