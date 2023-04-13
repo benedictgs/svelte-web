@@ -1,5 +1,5 @@
 <script lang="ts">
-    import logo from '$lib/media/logo.jpeg';
+    import logo from '$lib/media/logo.jpg';
     import sunIcon from '$lib/media/sun.svg';
     import moonIcon from '$lib/media/moon.svg';
 
