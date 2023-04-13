@@ -2,6 +2,8 @@
     import { onMount } from "svelte";
     import { fade } from "svelte/transition";
     import CountryFlag from '$lib/media/indonesia-flag.png';
+	import RadarContainer from "../chart/RadarContainer.svelte";
+	import LineAreaContainer from "../chart/LineAreaContainer.svelte";
 
 
     onMount(()=>{
@@ -45,17 +47,19 @@
 
 <section id="hero" class="flex justify-center ">
         
-    <div class="w-full lg:max-w-screen-lg mb-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-10 bg-slate-900/50  mx-3 p-6 md:px-6 rounded-xl">
-        <div in:fade={{delay:100,duration:1000}}
-        class="flex flex-col justify-between sm:max-w-sm row-span-2 lg:col-span-1">
-            <div id="identity" class="text-center">
-                <div class="flex flex-row justify-center">
-                    <h1 class="font-bebas text-3xl">Benedict G S</h1>
-                    <img class="h-9 mx-1 "src={CountryFlag} alt="Indonesian Flag">                       
+    <div class="w-full lg:max-w-screen-lg mb-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 lg:gap-10 bg-slate-900/50  mx-3 p-6 md:px-6 rounded-xl">
+        <div in:fade={{delay:100,duration:1000}} class="flex flex-col justify-between sm:max-w-sm row-span-2 lg:col-span-1">
+            <div class="flex flex-row">
+                <div class="bg-cyan-100 w-10 h-10 mx-10 sm:hidden float-left"></div>
+                <div id="identity" class="grow flex flex-col sm:items-center mb-3">
+                    <div class="flex flex-row ">
+                        <h1 class="font-bebas text-3xl">Benedict G S</h1>
+                        <img class="h-8 mx-1 "src={CountryFlag} alt="Indonesian Flag">
+                    </div>
+                    <h2>Creative Tech Enthusiast</h2>
                 </div>
-                <h2>Tech Enthusiast</h2>
             </div>
-            <picture></picture>
+            <picture class=" hidden sm:block"></picture>
             <div id="stats" class="grid grid-cols-3 place-items-center p-3">
                 <div class="flex flex-col text-center"> <p class="font-bebas text-4xl">{age}</p> <p class="uppercase">yr</p></div>
                 <div class="flex flex-col text-center"> <p class="font-bebas text-4xl">177</p> <p class="uppercase">cm</p></div>
@@ -71,19 +75,15 @@
                 {/each}
             </ul>
         </div>
-        <div>
+        <div class="flex flex-col">
             <hr class=" my-3  border-gray-600">
             <h3 in:fade="{{delay:1000,duration:1000}}" class="font-bebas text-xl">Chart</h3>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates totam labore, perferendis cupiditate veniam sequi cum neque architecto praesentium et. Ipsa voluptate excepturi blanditiis, obcaecati molestiae ratione velit tempore iusto?
+            <div class=" min-h-[10rem]"><RadarContainer/></div>
         </div>
-        <div class="sm:col-span-2">
+        <div class="sm:col-span-2 flex flex-col">
             <hr class=" my-3  border-gray-600">
-            <h3 in:fade="{{delay:1000,duration:1000}}" class="font-bebas text-xl">Timeline</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptatem nemo adipisci iste debitis. Quidem, a. Nesciunt nisi error quos quo, doloremque aut voluptatem adipisci nostrum similique, iusto veniam omnis.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ut maxime fugiat in sequi, magni magnam quod unde molestiae dolor excepturi nemo neque laborum at ipsam sapiente vero. Architecto, odio?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque labore sed omnis blanditiis quod accusamus aliquid voluptatibus doloremque, incidunt delectus amet rem ea hic, ratione ullam error eligendi mollitia nulla!
-            </p>
+            <h3 in:fade="{{delay:1000,duration:1000}}" class="font-bebas text-xl">Timeline of Performance</h3>
+            <div class="min-h-[10rem]"><LineAreaContainer/></div>
         </div>
     </div>
 </section>
