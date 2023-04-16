@@ -8,9 +8,11 @@
 
     onMount(()=>{
         const timeout = setTimeout(() => {
-            const element = document.getElementById('hero');
-            element?.scrollIntoView({ behavior: 'smooth' });
-            console.log('beep')
+            if (scrollY<300) {
+                const element = document.getElementById('hero');
+                element?.scrollIntoView({ behavior: 'smooth' });
+                console.log('beep')
+            }
 		}, 5000);
 
 		return () => clearTimeout(timeout);

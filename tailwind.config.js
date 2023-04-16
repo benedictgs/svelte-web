@@ -10,6 +10,9 @@ export default {
       fontFamily: {
         lexend: ['Lexend', ...defaultTheme.fontFamily.sans],
         bebas: ['Bebas Neue', ...defaultTheme.fontFamily.serif]
+      },
+      screens: {
+        xs: '320px',
       }
     },
   },
