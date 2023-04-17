@@ -20,6 +20,8 @@
 		return () => clearTimeout(timeout);
 	})
 
+    export let id:string = "hero";
+
     let stats = [
         {key:"Country of Origin", value:"Indonesia"},
         {key:"Gender", value:"Male ♂️"},
@@ -49,7 +51,7 @@
 
 </script>
 
-<section id="hero" class="flex justify-center bg-cover bg-top bg-no-repeat bg-fixed bg-[url('$lib/media/background-hero-blur.webp')] pt-4 ">
+<section id={id} class="flex justify-center bg-cover bg-top bg-no-repeat bg-fixed bg-[url('$lib/media/background-hero-blur.webp')] pt-4 ">
     <div class="w-full lg:max-w-screen-lg mb-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 lg:gap-10 bg-black/50  mx-3 p-6 md:px-6 rounded-xl">
         <div in:fade={{delay:100,duration:1000}} class="flex flex-col justify-between sm:max-w-sm row-span-2 lg:col-span-1">
             <div class="flex flex-row">
@@ -58,7 +60,7 @@
                 </div>
                 <div id="identity" class="grow flex flex-col sm:items-center mb-3">
                     <div class="flex flex-row ">
-                        <h1 class="font-bebas text-3xl">Benedict G S</h1>
+                        <h1 class="font-bebas text-3xl">Benedict G. S.</h1>
                         <img class="h-8 mx-1 "src={CountryFlag} alt="Indonesian Flag">
                     </div>
                     <h2>Creative Tech Enthusiast</h2>
@@ -89,7 +91,7 @@
         </div>
         <div class="sm:col-span-2 flex flex-col">
             <hr class=" my-3  border-gray-600">
-            <h3 in:fade="{{delay:1000,duration:1000}}" class="font-bebas text-xl">Timeline of Performance</h3>
+            <h3 in:fade="{{delay:1000,duration:1000}}" class="font-bebas text-xl mb-3">Timeline of Performance</h3>
             <div class="min-h-[10rem] hover:animate-pulse"><LineAreaContainer/></div>
         </div>
     </div>

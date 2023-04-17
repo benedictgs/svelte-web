@@ -72,6 +72,8 @@
 				y={yTick}
 				dx=""
 				dy=""
+				fill="#fff"
+				stroke="#fff"
 				text-anchor={textAnchor(i)}>{formatTick(tick)}</text
 			>
 		</g>

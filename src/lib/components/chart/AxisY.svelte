@@ -69,6 +69,7 @@
 				y='{(isBandwidth ? ($yScale.bandwidth() / 2) + yTick : yTick)}'
 				dx='{isBandwidth ? -9 : dxTick}'
 				dy='{isBandwidth ? 4 : dyTick}'
+				stroke="#aaa"
 				style="text-anchor:{isBandwidth ? 'end' : textAnchor};"
 			>{formatTick(tick)}</text>
 		</g>
