@@ -3,10 +3,19 @@
     import '@fontsource/bebas-neue';
     import '@fontsource/lexend'
     import '../app.css';
+
+    import helloThere from '$lib/hello';
     
     import Header from './Header.svelte';
+	import Footer from './Footer.svelte';
+	import { afterUpdate } from 'svelte';
 
     export let data: LayoutData;
+
+    afterUpdate(() => {
+        helloThere();
+    });
+
 </script>
 
 
@@ -15,7 +24,7 @@
        
     <Header />
     <slot />
-    
+    <Footer />
 </body>
 
 
