@@ -39,7 +39,7 @@
             <li class="mx-2 md:mx-4 hover:scale-105 transition-transform hover:drop-shadow-[0_0_4px_hsla(200,100%,50%,60%)]">
                 <a href="/">Home</a>
             </li>
-            <li class="mx-2 md:mx-4 hover:scale-105 transition-transform hover:drop-shadow-[0_0_4px_hsla(200,100%,50%,60%)]">
+            <li class="hidden mx-2 md:mx-4 hover:scale-105 transition-transform hover:drop-shadow-[0_0_4px_hsla(200,100%,50%,60%)]">
                 <a href="/blog">Blog</a>
             </li>
             <li class="mx-2 md:mx-4 hover:scale-105 transition-transform hover:drop-shadow-[0_0_4px_hsla(200,100%,50%,60%)]">
