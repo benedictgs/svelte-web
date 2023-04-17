@@ -4,7 +4,7 @@
     export let data: PageData;
 </script>
 
-<div class="absolute inset-0 z-0 bg-cover w-screen h-screen bg-no-repeat bg-[#0B1120] bg-[url('$lib/media/dark-room-light.webp')]"></div>
+<div class="absolute inset-0 z-0 bg-cover bg-center  bg-no-repeat bg-[#0B1120] bg-[url('$lib/media/dark-room-light.webp')]"></div>
 
 <div class="relative flex flex-col justify-center items-center">
     <div class="z-10 flex flex-col items-center text-center lg:mt-20">
