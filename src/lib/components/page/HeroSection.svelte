@@ -6,7 +6,6 @@
 	import LineAreaContainer from "../chart/LineAreaContainer.svelte";
     import PotraitProfile from '$lib/media/potrait-profile.png';
     import PotraitProfileMini from '$lib/media/potrait-profile-narrow.webp';
-	import ImageLoader from "../ImageLoader.svelte";
 
 
     onMount(()=>{
