@@ -4,6 +4,9 @@
     import CountryFlag from '$lib/media/indonesia-flag.png';
 	import RadarContainer from "../chart/RadarContainer.svelte";
 	import LineAreaContainer from "../chart/LineAreaContainer.svelte";
+    import PotraitProfile from '$lib/media/potrait-profile.png';
+    import PotraitProfileMini from '$lib/media/potrait-profile-narrow.webp';
+	import ImageLoader from "../ImageLoader.svelte";
 
 
     onMount(()=>{
@@ -21,7 +24,7 @@
     let stats = [
         {key:"Country of Origin", value:"Indonesia"},
         {key:"Gender", value:"Male ♂️"},
-        {key:"Status", value:"Single 🔥"},
+        {key:"Status", value:"Single 🔥 and Barely Alive"},
         {key:"Experience", value:"2 years"},
         {key:"Degree", value:"Bachelor of Engineering"},
         {key:"Intelligence Quotient", value:"133"},
@@ -47,12 +50,13 @@
 
 </script>
 
-<section id="hero" class="flex justify-center ">
-        
-    <div class="w-full lg:max-w-screen-lg mb-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 lg:gap-10 bg-slate-900/50  mx-3 p-6 md:px-6 rounded-xl">
+<section id="hero" class="flex justify-center bg-cover bg-top bg-no-repeat bg-fixed bg-[url('$lib/media/background-hero-blur.webp')] pt-4 ">
+    <div class="w-full lg:max-w-screen-lg mb-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 lg:gap-10 bg-black/50  mx-3 p-6 md:px-6 rounded-xl">
         <div in:fade={{delay:100,duration:1000}} class="flex flex-col justify-between sm:max-w-sm row-span-2 lg:col-span-1">
             <div class="flex flex-row">
-                <div class="bg-cyan-100 w-10 h-10 mx-10 sm:hidden float-left"></div>
+                <div class="sm:hidden grow-0 max-w-[10rem]">
+                    <img loading="lazy" src={PotraitProfileMini} alt="Profile" class="  ">
+                </div>
                 <div id="identity" class="grow flex flex-col sm:items-center mb-3">
                     <div class="flex flex-row ">
                         <h1 class="font-bebas text-3xl">Benedict G S</h1>
@@ -61,7 +65,9 @@
                     <h2>Creative Tech Enthusiast</h2>
                 </div>
             </div>
-            <picture class=" hidden sm:block"></picture>
+            <picture class=" hidden sm:grid justify-center ">
+                <img loading="lazy" src={PotraitProfile} alt="Profile" class="max-h-[40rem] ">
+            </picture>
             <div id="stats" class="grid grid-cols-3 place-items-center p-3">
                 <div class="flex flex-col text-center"> <p class="font-bebas text-4xl">{age}</p> <p class="uppercase">yr</p></div>
                 <div class="flex flex-col text-center"> <p class="font-bebas text-4xl">177</p> <p class="uppercase">cm</p></div>
@@ -80,12 +86,12 @@
         <div class="flex flex-col">
             <hr class=" my-3  border-gray-600">
             <h3 in:fade="{{delay:1000,duration:1000}}" class="font-bebas text-xl">Chart</h3>
-            <div class=" min-h-[10rem]"><RadarContainer/></div>
+            <div class=" min-h-[10rem] hover:animate-pulse"><RadarContainer/></div>
         </div>
         <div class="sm:col-span-2 flex flex-col">
             <hr class=" my-3  border-gray-600">
             <h3 in:fade="{{delay:1000,duration:1000}}" class="font-bebas text-xl">Timeline of Performance</h3>
-            <div class="min-h-[10rem]"><LineAreaContainer/></div>
+            <div class="min-h-[10rem] hover:animate-pulse"><LineAreaContainer/></div>
         </div>
     </div>
 </section>

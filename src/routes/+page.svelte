@@ -30,23 +30,25 @@
 <svelte:window bind:scrollY={y}/>
 
 <main class="flex flex-col">
-    <section class="h-screen flex flex-col items-center">
+    <section class="h-screen max-h-[60rem] flex flex-col items-center">
         <picture class="absolute justify-end top-0 -z-0">
             <img class="w-screen h-screen object-cover" src={BackgroundHighlight} alt="backgroundhighlight" decoding="async">
         </picture>
-        <div class="z-10 flex flex-col items-center text-center lg:mt-20">
+        <div class="z-10 flex flex-col items-center text-center lg:mt-20 mb-60 xl:mb-80">
             <h1 class="text-7xl mx-10 mt-20 sm:text-9xl  font-lexend drop-shadow-[2px_10px_5px_hsla(200,100%,0%,50%)]">Hello There</h1>
-            <p class="mx-10 sm:mx-20 my-10 max-w-[75ch] font-light text-stone-200 md:text-xl">Welcome to my personal website, where you'll find a collection of my work, interests, and terrible jokes. Take a look around and make yourself at home. </p>
+            <p class="mx-10 sm:mx-20 my-10 max-w-[75ch] font-light text-stone-200 md:text-xl">Welcome to my personal website, where you'll find a collection of my work, interests, and <span class="font-semibold underline decoration-pink-500"> terrible jokes</span>. Take a look around and make yourself at home. </p>
             <a href="#hero" class="bg-slate-950/50 hover:text-lg p-2 drop-shadow-[2px_10px_5px_hsla(200,100%,0%,50%)] rounded-xl capitalize motion-safe:animate-bounce font-lexend">learn more</a>
         </div>
+        
+        <div class="absolute top-0 inset-x-0 h-screen max-h-[45rem] [mask-image:linear-gradient(180deg,transparent,black)] bg-[url('$lib/media/one-small-dot.svg')] bg-[center_top_-1px] border-b border-slate-100/5 xl:top-8"></div>
     </section>
     <HeroSection />
     
     <section id="brag" class="flex justify-center relative">
-        <div class="absolute top-0 inset-x-0 h-[37.5rem] [mask-image:linear-gradient(0deg,transparent,black)] bg-[url('$lib/media/one-small-grid.svg')] bg-[center_top_-1px] border-t dark:border-slate-100/5 xl:top-8"></div>
+        <div class="absolute top-0 inset-x-0 h-[20rem] [mask-image:linear-gradient(0deg,transparent,black)] bg-[url('$lib/media/one-small-grid.svg')] bg-[center_top_-1px] border-t border-slate-100/5 xl:top-8"></div>
         <div class="w-full lg:max-w-screen-lg  flex flex-col bg-black/30 my-10 mx-3 p-6 md:px-6 rounded-3xl">
             <h1 in:fade="{{delay:100,duration:1000}}" class="text-xl font-semibold">People call this Brag Section</h1>
-            <p in:fade="{{delay:600,duration:1000}}" class="text-xs text-slate-600 font-lexend"> but i feel like bragging is narcissistic </p>
+            <p in:fade="{{delay:600,duration:1000}}" class="text-xs text-slate-400 font-lexend"> i feel like i can't brag about this, although i did it anyway ¯\_(ツ)_/¯ </p>
             
             <div class="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-6 gap-5 items-center ">
                 {#each Logos as logo}
