@@ -20,7 +20,7 @@
 
 
 
-<body class="antialiased bg-[hsl(225,29%,16%)]  text-slate-200">
+<body class="antialiased bg-[hsl(225,29%,16%)]  text-slate-200 flex flex-col justify-between min-h-screen">
        
     <Header />
     <slot />
