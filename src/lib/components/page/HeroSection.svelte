@@ -52,7 +52,7 @@
 
 </script>
 
-<IntersectionObserver let:intersecting>
+<IntersectionObserver let:intersecting once={true}>
     {#if intersecting}
         <section id={id} class="flex justify-center bg-cover bg-top bg-no-repeat bg-fixed bg-[url('$lib/media/background-hero-blur.webp')] pt-4 ">
             <div class="w-full lg:max-w-screen-lg mb-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 lg:gap-10 bg-black/50  mx-3 p-6 md:px-6 rounded-xl">
