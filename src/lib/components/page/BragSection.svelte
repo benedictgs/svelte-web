@@ -39,7 +39,7 @@
             </div>
         </section>
     {:else}
-        <section id={id} class="flex justify-center relative"></section>
+        <section id={id} class="flex justify-center relative h-[30rem]"></section>
     {/if}
 
 </IntersectionObserver>
