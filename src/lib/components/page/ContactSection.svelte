@@ -6,6 +6,7 @@
 
     export let id:string = 'contact';
     
+    let name:string ;
 </script>
 
 
@@ -16,10 +17,10 @@
         <h1  class="text-xl font-semibold animate-pulse">Get in Contact</h1>
         <p  class="text-xs text-slate-400 font-lexend"> Let us pray that i don't get spam from this section </p>
         
-        <form class="my-6 z-20">
-            <input type="text" id="name" placeholder="name" required>
+        <form class="my-6 z-20" on:submit|preventDefault={()=> alert(`thank you ${name} for contacting me`)}>
+            <input type="text" id="name" placeholder="name" required bind:value={name}>
             <input type="email" placeholder="example@email.com" required>
-            <input type="submit">
+            <input type="submit" >
 
         </form>
     </div>

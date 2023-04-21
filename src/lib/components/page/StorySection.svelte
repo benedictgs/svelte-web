@@ -41,7 +41,7 @@
         </div>
         <div class="w-full h-full ">
             <ScrollShow fly="scaleY">
-                <div  class="mx-[1.5rem] my-[1rem] h-[20rem] p-1 bg-cyan-200  rounded-full "> </div>
+                <div  class="ml-[1rem] mr-[1.5rem] my-[1rem] h-[20rem] p-1 bg-cyan-200  rounded-full "> </div>
             </ScrollShow>
         </div>
         <div class="w-full col-span-3">
