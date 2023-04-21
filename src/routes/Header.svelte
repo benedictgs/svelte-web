@@ -1,5 +1,5 @@
 <script lang="ts">
-    import logo from '$lib/media/logo.jpg';
+    import logo from '$lib/media/logo.jpeg';
     import sunIcon from '$lib/media/sun.svg';
     import moonIcon from '$lib/media/moon.svg';
 
@@ -22,7 +22,7 @@
 
 </script>
 
-<header class="flex justify-center items-center sticky top-0 z-50 ">
+<header class="flex justify-center items-center sticky top-0 z-50">
     <nav class="flex justify-between items-center w-full lg:max-w-screen-lg backdrop-blur-sm bg-slate-900/40 p-2 m-3 md:p-3 rounded-xl">
         <div class="flex items-center hidden xs:inline-flex">
             <a href="/">
