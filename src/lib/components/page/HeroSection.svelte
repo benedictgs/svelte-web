@@ -60,28 +60,36 @@
                         <img loading="lazy" src={PotraitProfileMini} alt="Profile" class="  ">
                     </div>
                     <div id="identity" class="grow flex flex-col sm:items-center mb-3">
-                        <div class="flex flex-row ">
-                            <h1 class="font-bebas text-3xl">Benedict G. S.</h1>
-                            <img class="h-8 mx-1 "src={CountryFlag} alt="Indonesian Flag">
-                        </div>
-                        <h2>Creative Tech Enthusiast</h2>
+                        <ScrollShow fly="up" delay={100}>
+                            <div class="flex flex-row ">
+                                <h1 class="font-bebas text-3xl">Benedict G. S.</h1>
+                                <img class="h-8 mx-1 "src={CountryFlag} alt="Indonesian Flag">
+                            </div>
+                        </ScrollShow>
+                        <ScrollShow fly="up" delay={300}>
+                            <h2>Creative Tech Enthusiast</h2>
+                        </ScrollShow>
                     </div>
                 </div>
                 <picture class=" hidden sm:grid justify-center hover:animate-pulse hover:scale-105">
                     <img loading="lazy" src={PotraitProfile} alt="Profile" class="max-h-[24rem] ">
                 </picture>
-                <div  id="stats" class="grid grid-cols-3 place-items-center p-3">
-                    <div class="flex flex-col text-center hover:animate-pulse hover:scale-105"> <p class="font-bebas text-4xl">{age}</p> <p class="uppercase">yr</p></div>
-                    <div class="flex flex-col text-center hover:animate-pulse hover:scale-105"> <p class="font-bebas text-4xl">77</p> <p class="uppercase">kg</p></div>
-                    <div class="flex flex-col text-center hover:animate-pulse hover:scale-105"> <p class="font-bebas text-4xl">177</p> <p class="uppercase">cm</p></div>
-                </div>
+                <ScrollShow fly="up" delay={500}>
+                    <div  id="stats" class="grid grid-cols-3 place-items-center p-3">
+                        <div class="flex flex-col text-center hover:animate-pulse hover:scale-105"> <p class="font-bebas text-4xl">{age}</p> <p class="uppercase">yr</p></div>
+                        <div class="flex flex-col text-center hover:animate-pulse hover:scale-105"> <p class="font-bebas text-4xl">77</p> <p class="uppercase">kg</p></div>
+                        <div class="flex flex-col text-center hover:animate-pulse hover:scale-105"> <p class="font-bebas text-4xl">177</p> <p class="uppercase">cm</p></div>
+                    </div>
+                </ScrollShow>
             </div>
             <div>
                 <hr class=" my-3  border-gray-600">
                 <h3  class="font-bebas text-xl hover:animate-pulse hover:scale-105">Personal Details</h3>
                 <ul  class="">
-                    {#each stats as stat}
-                    <li class="hover:animate-pulse hover:scale-105"><span class="font-light">{stat.key} : </span><span class="font-semibold">{stat.value}</span></li>
+                    {#each stats as stat, i}
+                    <ScrollShow fly="up" delay={i*100}>
+                        <li class="hover:animate-pulse hover:scale-105"><span class="font-light">{stat.key} : </span><span class="font-semibold">{stat.value}</span></li>
+                    </ScrollShow>
                     {/each}
                 </ul>
             </div>
