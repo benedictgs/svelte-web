@@ -15,7 +15,7 @@
                 element?.scrollIntoView({ behavior: 'smooth' });
                 console.log('beep')
             }
-		}, 5000);
+		}, 10000);
 
 		return () => clearTimeout(timeout);
 	})

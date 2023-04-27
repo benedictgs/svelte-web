@@ -1,11 +1,11 @@
 export default [
 	{
 		name: 'Ben',
-		social: 9,
-		creative: 8,
-		logic: 8,
-		practical: 6,
-		personal: 8
+		social: 7,
+		creative: 9,
+		logic: 7.5,
+		practical: 5.6,
+		personal: 7.8,
 	},
 	// {
 	// 	name: 'Average',

@@ -20,7 +20,7 @@
         <form class="my-6 z-20" on:submit|preventDefault={()=> alert(`thank you ${name} for contacting me`)}>
             <input type="text" id="name" placeholder="name" required bind:value={name}>
             <input type="email" placeholder="example@email.com" required>
-            <input type="submit" >
+            <input type="submit" value="Contact" >
 
         </form>
     </div>
