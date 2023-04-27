@@ -57,11 +57,23 @@
         },
     ]
 
-    let grids = [ 1,2,3,4,5,6];
+    let current =-1;
     
     let name="Standing in the shoulder of giants";
     let description = "I am fortunate to meet and learn from inspiring people";
     let insight = "click the picture above";
+
+    function toggleCaption(index:number) {
+        
+        if (current !== index) {
+            setCaption(index);
+            current=index;
+        }
+        else {
+            resetCaption();
+            current=-1;
+        }
+    }
 
     function setCaption(index:number) {
         name = data[index].name;
@@ -81,7 +93,7 @@
 
 
 <section id={id} class="flex justify-center mt-20 pb-3 bg-[linear-gradient(0,rgba(0,0,0,0.6),transparent)] overflow-hidden">
-    <div class="w-full lg:max-w-screen-lg h-[40rem] grid  grid-cols-2 sm:grid-cols-3  mx-3 p-6  rounded-3xl relative"
+    <div class="w-full lg:max-w-screen-lg  grid  grid-cols-2 sm:grid-cols-3  mx-3 p-6  rounded-3xl relative"
     use:clickOutside on:outclick={resetCaption}
     >
         <div class=" col-span-2 sm:col-span-3">
@@ -91,9 +103,13 @@
             </ScrollShow>
         </div>
 
-        {#each data as people,i}
-        <img class="object-cover h-full w-full object-top" src="{people.id}" alt="{people.name}" on:click={()=>setCaption(i)}>
-        {/each}
+        <div class="col-span-2 sm:col-span-3 grid grid-cols-2 sm:grid-cols-3 ">
+            {#each data as people,i}
+            <ScrollShow fly="up" delay={i*200}>
+                <img class="object-cover h-full w-full object-top rounded-xl" src="{people.id}" alt="{people.name}" on:click={()=>toggleCaption(i)}>
+            </ScrollShow>
+            {/each}
+        </div>
         
         
             
