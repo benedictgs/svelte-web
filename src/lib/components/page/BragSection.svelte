@@ -26,8 +26,8 @@
         <section id={id} class="flex justify-center relative">
             <div class="absolute top-0 inset-x-0 h-[20rem] [mask-image:linear-gradient(0deg,transparent,black)] bg-[url('$lib/media/one-small-grid.svg')] bg-[center_top_-1px] border-t border-slate-100/5 xl:top-8"></div>
             <div class="w-full lg:max-w-screen-lg  flex flex-col bg-black/30 my-10 mx-3 p-6 md:px-6 rounded-3xl">
-                <h1  class="text-xl font-semibold">People call this Brag Section</h1>
-                <p  class="text-xs text-slate-400 font-lexend"> i feel like i can't brag about this, although i did it anyway ¯\_(ツ)_/¯ </p>
+                <h1  class="text-xl font-semibold">Organization at which i have graced my presence</h1>
+                <p  class="text-xs text-slate-400 font-lexend">People call this Brag Section  </p>
                 
                 <div class="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-6 gap-5 items-center ">
                     {#each Logos as logo, i}

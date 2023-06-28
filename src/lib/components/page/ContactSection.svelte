@@ -17,9 +17,10 @@
         <h1  class="text-xl font-semibold animate-pulse">Get in Contact</h1>
         <p  class="text-xs text-slate-400 font-lexend"> Let us pray that i don't get spam from this section </p>
         
-        <form class="my-6 z-20" on:submit|preventDefault={()=> alert(`thank you ${name} for contacting me`)}>
+        <form class="my-6 z-20 flex flex-col sm:grid sm:grid-cols-2" on:submit|preventDefault={()=> alert(`thank you ${name} for contacting me`)}>
             <input type="text" id="name" placeholder="name" required bind:value={name}>
             <input type="email" placeholder="example@email.com" required>
+            <textarea class="col-span-2 h-20 t" placeholder="write message here..."/>
             <input type="submit" value="Contact" >
 
         </form>
@@ -27,7 +28,7 @@
 </section>
 
 <style>
-    input {
+    input , textarea {
         background-color: rgba(0, 0, 0, 0.3);
         border-radius: 0.4rem;
         padding: 0.5rem;

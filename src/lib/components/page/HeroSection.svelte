@@ -25,7 +25,7 @@
     let stats = [
         {key:"Country of Origin", value:"Indonesia"},
         {key:"Gender", value:"Male ♂️"},
-        {key:"Status", value:"Single 🔥 and Barely Alive"},
+        {key:"Status", value:"🔵 Online & Barely Alive"},
         {key:"Experience", value:"2 years"},
         {key:"Degree", value:"Bachelor of Engineering"},
         {key:"Intelligence Quotient", value:"133"},
@@ -48,7 +48,14 @@
 
     let age = calculateAge();   
 
-
+    let radarClicked = false
+    function handleRadar(event) {
+        radarClicked = !radarClicked;
+	}
+    let timelineClicked = false
+    function handleTimeline(event) {
+        timelineClicked = !timelineClicked;
+	}
 </script>
 
 <section id={id} class="flex justify-center bg-cover bg-top bg-no-repeat bg-fixed bg-[linear-gradient(to_top,hsla(225,29%,16%,0.1)_40%,hsla(225,29%,16%,1)_80%),url('$lib/media/background-hero-blur.webp')]  pt-4">
@@ -62,7 +69,7 @@
                     <div id="identity" class="grow flex flex-col sm:items-center mb-3">
                         <ScrollShow fly="up" delay={100}>
                             <div class="flex flex-row ">
-                                <h1 class="font-bebas text-3xl">Benedict G. S.</h1>
+                                <h1 class="font-bebas text-3xl">Benedict</h1>
                                 <img class="h-8 mx-1 "src={CountryFlag} alt="Indonesian Flag">
                             </div>
                         </ScrollShow>
@@ -76,9 +83,9 @@
                 </picture>
                 <ScrollShow fly="up" delay={500}>
                     <div  id="stats" class="grid grid-cols-3 place-items-center p-3">
-                        <div class="flex flex-col text-center hover:animate-pulse hover:scale-105"> <p class="font-bebas text-4xl">{age}</p> <p class="uppercase">yr</p></div>
-                        <div class="flex flex-col text-center hover:animate-pulse hover:scale-105"> <p class="font-bebas text-4xl">77</p> <p class="uppercase">kg</p></div>
-                        <div class="flex flex-col text-center hover:animate-pulse hover:scale-105"> <p class="font-bebas text-4xl">177</p> <p class="uppercase">cm</p></div>
+                        <div class="flex flex-col text-center hover:animate-pulse hover:scale-105"> <p class="font-bebas text-4xl">{Math.floor(age/10)*10}+</p> <p class="capitalize">levels</p></div>
+                        <div class="flex flex-col text-center hover:animate-pulse hover:scale-105"> <p class="font-bebas text-4xl">7</p> <p class="capitalize">Wins</p></div>
+                        <div class="flex flex-col text-center hover:animate-pulse hover:scale-105"> <p class="font-bebas text-4xl">12</p> <p class="capitalize">Assists</p></div>
                     </div>
                 </ScrollShow>
             </div>
@@ -97,15 +104,22 @@
                 <hr class=" my-3  border-gray-600">
                 <h3  class="font-bebas text-xl hover:animate-pulse hover:scale-105">Chart</h3>
                 <div  class=" min-h-[10rem] hover:animate-pulse hover:scale-105">
-                    <RadarContainer/>
+                    <RadarContainer on:click={handleRadar}/>
                 </div>
+                {#if radarClicked}
+                    <div on:click={handleRadar} class="mt-2 text-slate-500"> Great strength and Well balanced,  practical skill improving</div>
+                {/if}
             </div>
             <div class="sm:col-span-2 flex flex-col">
                 <hr class=" my-3  border-gray-600">
                 <h3  class="font-bebas text-xl mb-3 hover:animate-pulse hover:scale-105">Timeline of Performance</h3>
-                <div  class="min-h-[10rem] hover:animate-pulse hover:scale-105">
-                    <LineAreaContainer/>
+                <div  class="min-h-[10rem] hover:animate-pulse hover:scale-105" >
+                    <LineAreaContainer on:click={handleTimeline}/>
                 </div>
+                {#if timelineClicked}
+                    <div on:click={handleTimeline} class="text-slate-500"> Trending up,  increased in perfomance for the future</div>
+                    <div on:click={handleTimeline} class="text-slate-500 text-xs"> *major slowdown on pandemic</div>
+                {/if}
             </div>
 
         

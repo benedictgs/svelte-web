@@ -9,6 +9,16 @@
 
 	import data from './points.js';
 
+	import { createEventDispatcher } from 'svelte';
+
+	const dispatch = createEventDispatcher();
+
+	function handleClick() {
+		dispatch('click', {
+			text: 'Hello!'
+		});
+	}
+
 	let brushExtents = [null, null];
 
 	const xKey = 'myX';
@@ -44,7 +54,7 @@
 	}
 </style>
 
-<div class="chart-container">
+<div class="chart-container" on:click={handleClick}>
 	<LayerCake
 		padding={{ right: 10, bottom: 20, left: 25 }}
 		x={xKey}
@@ -75,7 +85,7 @@
 	</LayerCake>
 </div>
 
-<div class="brush-container">
+<div class="brush-container" on:click={handleClick}>
 	<LayerCake
 		padding={{ top: 5 }}
 		x={xKey}

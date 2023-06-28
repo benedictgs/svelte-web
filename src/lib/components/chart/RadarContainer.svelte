@@ -8,6 +8,16 @@
 
 	import data from './radarScores.js';
 
+	import { createEventDispatcher } from 'svelte';
+
+	const dispatch = createEventDispatcher();
+
+	function handleClick() {
+		dispatch('click', {
+			text: 'Hello!'
+		});
+	}
+
 	const seriesKey = 'name';
 	const xKey = ['social', 'creative', 'logic', 'practical', 'personal'];
 
@@ -33,7 +43,7 @@
 	}
 </style>
 
-<div class="chart-container">
+<div class="chart-container" on:click={handleClick}>
 	<LayerCake
 		padding={{ top: 0, right: 0, bottom: 0, left: 0 }}
 		x={xKey}
