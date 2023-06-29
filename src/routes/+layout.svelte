@@ -18,7 +18,9 @@
 
 </script>
 
-
+<svelte:head>
+    <title>berightben</title>
+</svelte:head>
 
 <body class="antialiased bg-[hsl(225,29%,16%)]  text-slate-200 flex flex-col justify-between min-h-screen ">
        

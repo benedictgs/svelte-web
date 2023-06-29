@@ -17,6 +17,10 @@
 
 </script>
 
+<svelte:head>
+    <title>About this website</title>
+</svelte:head>
+
 <div class="absolute inset-0 -z-0 bg-cover bg-center bg-no-repeat bg-[#0B1120] bg-[url('$lib/media/hero-dark.jpg')] blur-3xl"></div>
 
 <div class="flex flex-col justify-center items-center">

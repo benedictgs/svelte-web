@@ -16,6 +16,9 @@
 
 </script>
 
+<svelte:head>
+    <title>berightben</title>
+</svelte:head>
 
 <svelte:window bind:scrollY={y}/>
 

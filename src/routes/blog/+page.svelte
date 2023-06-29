@@ -4,6 +4,10 @@
     export let data: PageData;
 </script>
 
+<svelte:head>
+    <title>beright blog</title>
+</svelte:head>
+
 <div class="absolute inset-0 z-0 bg-cover bg-center  bg-no-repeat bg-[#0B1120] bg-[url('$lib/media/dark-room-light.webp')]"></div>
 
 <div class="relative flex flex-col justify-center items-center">
